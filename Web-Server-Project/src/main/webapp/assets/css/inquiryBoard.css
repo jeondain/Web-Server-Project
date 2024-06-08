@@ -1,0 +1,53 @@
+.inquiry-table {
+	margin-top: 30px;
+}
+
+.inquiry-table table {
+	max-width: 100%;
+	margin: 0 auto 80px auto;
+	padding: 20px;
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+.inquiry-table th, .inquiry-table td {
+	padding: 12px 15px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+.inquiry-table th {
+	background-color: #f8f8f8;
+	font-weight: 600;
+	color: #333;
+}
+
+.inquiry-table tr:hover {
+	background-color: #f1f1f1;
+}
+
+.inquiry-table a {
+	color: #007bff;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.inquiry-table a:hover {
+	color: #0056b3;
+}
+
+.submit-btn-top-right {
+	display: inline-block;
+	background-color: #5830E0;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.submit-btn-top-right:hover {
+	background-color: #081828;
+	color: #fff;
+}

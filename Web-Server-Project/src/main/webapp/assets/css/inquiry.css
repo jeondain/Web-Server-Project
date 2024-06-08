@@ -1,0 +1,45 @@
+    body {
+        font-family: 'Lato', sans-serif;
+        background-color: #f8f9fa;
+    }
+    h3 {
+        font-family: 'Jost', sans-serif;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .contact-container {
+        max-width: 800px;
+        margin: 0 auto 80px auto;
+        padding: 20px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .form-group label {
+        font-weight: 600;
+    }
+    .form-group input, .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    .form-group textarea {
+        resize: vertical;
+    }
+    .submit-btn {
+        background-color: #5830E0;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .submit-btn:hover {
+        background-color: #081828;
+    }

@@ -1,0 +1,112 @@
+body {
+    font-family: 'Lato', sans-serif; 
+    background-color: #f8f9fa; 
+}
+
+.form-signin {
+    max-width: 650px;
+    min-width: 500px;
+    padding: 50px 80px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.form-signin .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #5830E0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-signin .btn:hover {
+    background-color: #081828;
+}
+
+.login-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.login-option a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.login-option-a {
+    width: 80px;
+}
+
+.login-option span {
+    display: flex;
+    align-items: center;
+}
+
+.login-option .separator {
+    margin: 0 5px;
+}
+
+.login-option .selected {
+    color: #5830E0;
+    font-weight: bold;
+}
+
+.phone-input-group {
+    display: flex;
+    align-items: center;
+}
+
+.phone-input-group select,
+.phone-input-group input {
+    width: 140px;
+    margin-right: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.phone-input-group .separator {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    width: 20px;
+}
+
+.submit-btn {
+    background-color: #5830E0;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 180px;
+}
+
+.submit-btn:hover {
+    background-color: #081828;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
