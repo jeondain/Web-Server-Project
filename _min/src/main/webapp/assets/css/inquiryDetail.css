@@ -1,0 +1,85 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.section-title h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.inquiry-details-container {
+	max-width: 100%;    
+	margin: 0 auto 20px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #333;
+}
+
+.response-container {
+	max-width: 100%;   
+	margin: 0 auto 80px auto; 
+    color: #333;
+}
+
+.inquiry-details-container h5,
+.response-container h5 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.inquiry-details-container p,
+.response-container p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.inquiry-details-container p:last-child,
+.response-container p:last-child {
+    margin-bottom: 15px;
+}
+
+.response-container p em {
+    font-style: italic;
+}
+
+.pending-response {
+    background-color: #f9f9f9;
+    border-color: #ddd;
+}
+
+.pending-response p {
+    color: #888;
+    font-style: italic;
+}
+
+.admin-response {
+    max-width: 800px;
+    margin: 0 auto 80px auto; 
+}
+
+.admin-response h5 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.admin-response .form-group {
+    margin-bottom: 20px;
+}
+
+.admin-response .btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.admin-response .btn:hover {
+    background-color: #0056b3;
+}
