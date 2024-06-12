@@ -55,13 +55,6 @@
                     <br/>
                     <br/>
                     <br/>
-<!--            <div class="login-option">
-                    <span>
-                      <a class="login-option-a" id="member" onclick="selectRole('member')">회원</a>
-                      <span class="separator">|</span>
-                      <a class="login-option-a" id="admin" onclick="selectRole('admin')">관리자</a>
-                    </span>
-                </div> -->
                 
                 <div class="form-floating mb-3 row">
                     <input type="text" class="form-control" name="id" required autofocus>

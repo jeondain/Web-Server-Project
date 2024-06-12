@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="EUC-KR">
 <title>Insert title here</title>
 </head>
 <body>
@@ -23,7 +23,7 @@
 					<div class="row">
 						<div class="col-12">
 							<div class="content">
-								<a href="adminpage.jsp">관리자 페이지</a>
+								<a href="reservationAllList.jsp">관리자 페이지</a>
 								<p class="copyright-text">소프트웨어학과 오현민 / 전다인</p>
 
 							</div>

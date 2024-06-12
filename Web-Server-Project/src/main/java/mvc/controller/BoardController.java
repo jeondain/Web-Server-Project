@@ -30,7 +30,7 @@ public class BoardController extends HttpServlet {
 		response.setContentType("text/html; charset=utf-8");
 		request.setCharacterEncoding("utf-8");
 	
-		if (command.equals("/BoardListAction.do")) {//등록된 글 목록 페이지 출력하기
+		if (command.equals("/BoardListAction.do")) { //등록된 글 목록 페이지 출력하기
 			requestBoardList(request);
 			RequestDispatcher rd = request.getRequestDispatcher("./inquiryBoard.jsp");
 			rd.forward(request, response);
@@ -38,15 +38,15 @@ public class BoardController extends HttpServlet {
 				requestLoginName(request);
 				RequestDispatcher rd = request.getRequestDispatcher("./inquiryForm.jsp");
 				rd.forward(request, response);				
-		} else if (command.equals("/BoardWriteAction.do")) {//새로운 글 등록
+		} else if (command.equals("/BoardWriteAction.do")) { //새로운 글 등록
 				requestBoardWrite(request);
 				RequestDispatcher rd = request.getRequestDispatcher("/BoardListAction.do");
 				rd.forward(request, response);						
-		} else if (command.equals("/BoardViewAction.do")) {//선택된 글 상자 페이지 가져오기
+		} else if (command.equals("/BoardViewAction.do")) { //선택된 글 상자 페이지 가져오기
 				requestBoardView(request);
 				RequestDispatcher rd = request.getRequestDispatcher("/BoardView.do");
 				rd.forward(request, response);						
-		} else if (command.equals("/BoardView.do")) {  //글 상세 페이지 출력하기
+		} else if (command.equals("/BoardView.do")) { //글 상세 페이지 출력하기
 				RequestDispatcher rd = request.getRequestDispatcher("./inquiryDetail.jsp");
 				rd.forward(request, response);	
 		} else if (command.equals("/BoardUpdateAction.do")) { //선택된 글 수정하기
@@ -63,6 +63,7 @@ public class BoardController extends HttpServlet {
 				rd.forward(request, response);				
 		} 
 	}
+	
 	//등록된 글 목록 가져오기
 	public void requestBoardList(HttpServletRequest request){
 			

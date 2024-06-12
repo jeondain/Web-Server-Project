@@ -5,6 +5,8 @@
 <%@ page import="DAO.MemberDAO"%>
 <%@ page import="DTO.ReservationDTO"%>
 <%@ page import="DAO.ReservationDAO"%>
+<%@ include file ="dbconn.jsp" %>
+
 
 <%
 	String sessionId = (String) session.getAttribute("sessionId");
@@ -109,7 +111,7 @@
 	ReservationDAO reservationDAO = ReservationDAO.getInstance();
 	ArrayList<ReservationDTO> reservations = reservationDAO.getReservationsByMember(sessionId);
 	%>
-
+	
 	<div class="profile-container">
 		<div class="profile-info">
 			<h4>회원 정보</h4>
@@ -136,42 +138,54 @@
 
 	<div class="profile-container">
 		<h4 class="section-title">예약 현황</h4>
-		<div class="section-content">
+		<span>* 예약 수정 및 삭제는 1:1 게시판 문의를 통해 가능합니다.</span>
+		<!-- <div class="section-content"> -->
 			<!-- Reservation status content goes here -->
-			<table class="status-table">
-				<thead>
-					<tr>
-						<th style="width: 240px;">체크인</th>
-						<th style="width: 240px;">체크아웃</th>
-						<th style="width: 200px;">객실</th>
-						<th style="width: 200px;">상태</th>
-					</tr>
-				</thead>
-				<tbody>
-					<%
-					for (ReservationDTO reservation : reservations) {
-					%>
-					<tr class="status-<%=reservation.getStatus()%>"
-						onclick="showPopup(this)">
-						<td><%=reservation.getCheckIn()%></td>
-						<td><%=reservation.getCheckOut()%></td>
-						<td><%=reservation.getRoom()%></td>
-						<td>
-							<%
-							String status = reservation.getStatus();
-							if (status.equals("pending")) {
-								out.print("이용 전");
-							} else if (status.equals("completed")) {
-								out.print("이용 완료");
-							}
-							%>
-						</td>
-					</tr>
-					<%
-					}
-					%>
-				</tbody>
-			</table>
+			<%
+		       String memberId = member.getId();
+		       if (memberId != null && !memberId.isEmpty()) {
+		       PreparedStatement pstmt = null;
+		       ResultSet rs = null;
+		       String sql = "SELECT * FROM Reservation WHERE memberId = ?";
+		       pstmt = conn.prepareStatement(sql);
+		       pstmt.setString(1, memberId);
+		       rs = pstmt.executeQuery();
+		    %>	
+			<table class="table">
+                    <thead>
+                        <tr>
+                            <th>예약 번호</th>
+                            <th>입실/퇴실 날짜</th>
+                            <th>인원수</th>
+                            <th>객실</th>
+                            <th>모닝콜 서비스</th>
+                            <th>요청사항</th>
+                            <th>총 결제금액</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <%
+                            while (rs.next()) {
+                      %>
+                        <tr onclick="showPopup(this)">
+                            <td><%= rs.getString("id") %></td>
+                            <td><%= rs.getString("checkInOut") %></td>
+                            <td><%= rs.getString("guests") %> 명</td>
+                            <td><%= rs.getString("roomType") %></td>
+                            <td><%= rs.getString("wakeUpCall") %></td>
+                            <td><%= rs.getString("requests") %></td>
+                            <td><%= rs.getString("totalPrice") %> 원</td>
+                        </tr>
+                        <%
+                        }
+                        if (rs != null) rs.close();
+                        if (pstmt != null) pstmt.close();
+                        if (conn != null) conn.close();
+                    }
+                		%>
+                    </tbody>
+                </table>
+                
 		</div>
 	</div>
 

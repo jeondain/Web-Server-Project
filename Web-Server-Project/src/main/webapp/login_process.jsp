@@ -18,7 +18,7 @@
     if (user_id.equals(admin_id) && user_pw.equals(admin_pw)) {
         session.setAttribute("sessionId", user_id);
         session.setAttribute("sessionPw", user_pw);
-        response.sendRedirect("adminpage.jsp");
+        response.sendRedirect("reservationAllList.jsp");
     } else {
         boolean validUser = false;
         for(int i=0; i<listOfMembers.size(); i++) {

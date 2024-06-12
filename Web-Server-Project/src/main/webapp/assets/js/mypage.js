@@ -1,8 +1,8 @@
 function showPopup(row) {
-    var details = '체크인: ' + row.cells[0].innerText + '<br>' +
-                  '체크아웃: ' + row.cells[1].innerText + '<br>' +
-                  '호실: ' + row.cells[2].innerText + '<br>' +
-                  '상태: ' + row.cells[3].innerText;
+    var details = '예약번호: ' + row.cells[0].innerText + '<br>' +
+                  '체크인/체크아웃: ' + row.cells[1].innerText + '<br>' +
+                  '인원: ' + row.cells[2].innerText + '<br>' +
+                  '객실: ' + row.cells[3].innerText;
     document.getElementById('popup-details').innerHTML = details;
     document.getElementById('popup').style.display = 'block';
 }

@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import = "java.util.Date" %>
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="zxx">
 <head>
 <meta charset="UTF-8" />
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -30,17 +31,7 @@
 </head>
 
 <body>
-	<!-- Preloader -->
-	<div class="preloader">
-		<div class="preloader-inner">
-			<div class="preloader-icon">
-				<span></span> <span></span>
-			</div>
-		</div>
-	</div>
-	<!-- /End Preloader -->
-
-	<!-- 헤더 -->
+	
 	<%@ include file="header.jsp"%>
 
 	<!-- Start Hero Area -->
@@ -54,6 +45,24 @@
 							<h2 class="wow fadeInUp" data-wow-delay=".3s">SKU HOTEL</h2>
 							<p class="wow fadeInUp" data-wow-delay=".5s">
 								성북구 최고의 호텔 마치 숲속에 들어온 듯한 북한산뷰 <br>편안히 즐기다 가세요
+							</p>
+							<br>
+							<p class="wow fadeInUp" data-wow-delay=".5s">
+							<%
+								Date day = new java.util.Date();
+								String am_pm;
+								int hour = day.getHours();
+								int minute = day.getMinutes();
+								int second = day.getSeconds();
+								if(hour/12==0){
+									am_pm ="AM";
+								} else {
+									am_pm ="PM";
+									hour=hour-12;
+								}
+								String CT = String.format("%d:%02d:%02d %s", hour, minute, second, am_pm);
+								out.println("현재 접속 시각: " + CT + "\n");
+							%>         
 							</p>
 						</div>
 						<!-- End Search Form -->
@@ -191,7 +200,7 @@
 									</ul>
 								</div>
 								<div class="bottom-content">
-									<a href="javascript:void(0)" class="price"><span>홈페이지
+									<a href="https://www.skuniv.ac.kr/" class="price"><span>홈페이지
 											연결</span> </a>
 								</div>
 							</div>
@@ -219,7 +228,7 @@
 									</ul>
 								</div>
 								<div class="bottom-content">
-									<a href="javascript:void(0)" class="price"><span>홈페이지
+									<a href="https://www.skuniv.ac.kr/" class="price"><span>홈페이지
 											연결</span> </a>
 								</div>
 							</div>
@@ -248,7 +257,7 @@
 									</ul>
 								</div>
 								<div class="bottom-content">
-									<a href="javascript:void(0)" class="price"><span>홈페이지
+									<a href="https://www.skuniv.ac.kr/" class="price"><span>홈페이지
 											연결</span> </a>
 								</div>
 							</div>
@@ -276,7 +285,7 @@
 									</ul>
 								</div>
 								<div class="bottom-content">
-									<a href="javascript:void(0)" class="price"><span>홈페이지
+									<a href="https://www.skuniv.ac.kr/" class="price"><span>홈페이지
 											연결</span> </a>
 								</div>
 							</div>
@@ -305,7 +314,7 @@
 									</ul>
 								</div>
 								<div class="bottom-content">
-									<a href="javascript:void(0)" class="price"><span>홈페이지
+									<a href="https://www.skuniv.ac.kr/" class="price"><span>홈페이지
 											연결</span> </a>
 								</div>
 							</div>
@@ -334,7 +343,7 @@
 									</ul>
 								</div>
 								<div class="bottom-content">
-									<a href="javascript:void(0)" class="price"><span>홈페이지
+									<a href="https://www.skuniv.ac.kr/" class="price"><span>홈페이지
 											연결</span> </a>
 								</div>
 							</div>

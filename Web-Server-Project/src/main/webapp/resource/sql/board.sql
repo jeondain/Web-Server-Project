@@ -6,6 +6,7 @@ CREATE TABLE board (
        content text not null,
        regist_day varchar(30),
        hit int,
+       response varchar(100),
        ip varchar(20),
        PRIMARY KEY (num)
 )default CHARSET=utf8;
