@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*, java.util.ArrayList"%>
+<%@ include file="dbconn.jsp" %>
+
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 <head>
@@ -71,13 +73,10 @@ img {
 	<%
 	String roomId = request.getParameter("id");
 	if (roomId != null && !roomId.isEmpty()) {
-		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/webServerDB", "root", "9999");
 			String sql = "SELECT * FROM Room WHERE room_id = ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, roomId);
